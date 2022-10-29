@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Montserrat, Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content-body {
+  padding: 5rem;
+}
+.sub-header {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.align-center-start {
+  display:grid;
+  place-items: center start;
+}
+
+.align-center {
+  display:grid;
+  place-items: center;
+}
+.section {
+  padding-top: 3rem;
+  margin-bottom:5rem;
+}
+
+.paragraph{
+  padding-top:2%;
+  padding-bottom:2%;
+}
+
+
+
+
+
