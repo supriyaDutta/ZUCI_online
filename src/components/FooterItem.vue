@@ -4,20 +4,22 @@ import { RouterLink } from "vue-router";
 <template>
   <div class="footer-wrapper">
     <div class="first">
-      <RouterLink to="/" class="button white-text">Home</RouterLink>
+      <RouterLink to="/" class="white-text button"
+        ><span class="ftext">Home</span></RouterLink
+      >
     </div>
 
     <div class="right">
-      <RouterLink to="/rulebook" class="button white-text">
-        Rule Book
+      <RouterLink to="/rulebook" class="white-text button">
+        <span class="ftext">Rule Book</span>
       </RouterLink>
 
       <span></span>
       <a
         href="https://github.com/supriyaDutta/ZUCI_downloads"
         target="_blank"
-        class="button white-text"
-        >Download</a
+        class="white-text button"
+        ><span class="ftext">Download</span></a
       >
     </div>
   </div>
@@ -42,13 +44,16 @@ import { RouterLink } from "vue-router";
 .button {
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 17x;
-  font-weight: bold;
 }
 .red-text {
   color: #f0474b;
 }
 .white-text {
   color: white;
+}
+
+.ftext {
+  font-size: 1rem;
+  font-weight: 600;
 }
 </style>

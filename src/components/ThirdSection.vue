@@ -4,10 +4,10 @@ import "../assets/sharedHomePage.css";
 <template>
   <div class="third-section">
     <div class="grid-colrow21">
-      <div class="cell-colrow12">
+      <div class="cell-colrow12" id="image">
         <img src="@/images/arrangecards.png" alt="" />
       </div>
-      <div class="cell-span2 align-center-start">
+      <div class="cell-span2 align-center-start" id="description">
         <div class="">
           <span class="big-size-text"
             ><span class="bold-text zuci-text zuci-text-style"> PHY-GITAL</span>
@@ -43,17 +43,20 @@ import "../assets/sharedHomePage.css";
   padding-right: 5vw;
   background-color: #f0474b;
 }
-.third-section > .grid-colrow21 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 0.5fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 10px;
-  margin: 0 auto;
+
+@media only screen and (min-width: 551px) {
+  .third-section > .grid-colrow21 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "image image description";
+    grid-column-gap: 10px;
+    margin: 0 auto;
+  }
 }
 
-.third-section > .grid-colrow21 > .cell-span2 {
-  grid-column: 3 / span 1;
-  grid-row: 1 / span 1;
+.third-section > .grid-colrow21 > #description {
+  grid-area: description;
   color: white;
 }
 .third-section > .grid-colrow21 > .cell-span2 > div {
@@ -61,14 +64,34 @@ import "../assets/sharedHomePage.css";
   border-left: 0.2em solid white;
 }
 
-.third-section > .grid-colrow21 > .cell-colrow12 {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 1;
+.third-section > .grid-colrow21 > #image {
+  grid-area: image;
   padding-right: 2em;
 }
 
 .third-section > .grid-colrow21 > .cell-colrow12 > img {
   max-width: 100%;
   height: auto;
+}
+
+@media only screen and (max-width: 550px) {
+  .third-section > .grid-colrow21 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.2fr;
+    grid-template-areas:
+      "image"
+      "description";
+    grid-column-gap: 10px;
+    margin: 0 auto;
+  }
+  .third-section > .grid-colrow21 > .cell-span2 > div {
+    border-left: 0;
+  }
+
+  .third-section > .grid-colrow21 > #image {
+    grid-area: image;
+    padding-right: 0;
+  }
 }
 </style>

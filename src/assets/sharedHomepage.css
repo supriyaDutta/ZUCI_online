@@ -12,16 +12,22 @@
   font-weight: 700;
 }
 .large-text {
-  font-size: 10vh;
+  font-size: 7vw;
   line-height: 0.8;
 }
 .align-center-start {
   display: grid;
   place-items: center;
 }
-
+.text-align-center {
+ text-align:center;
+}
 .red-text {
   color: #f0474b;
+}
+ .big-size-title {
+  font-size: 7vw;
+  line-height: 0.9;
 }
 
 .green-text {
@@ -29,7 +35,7 @@
 }
 .zuci-white-text {
   color: white;
-  font-size: 500;
+  font-size: 5vw;
 }
 .big-size-text {
   font-size: 3rem;
@@ -41,7 +47,7 @@
 }
 
 .zuci-text-style {
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-weight: 500;
   line-height: 0.2;
 }

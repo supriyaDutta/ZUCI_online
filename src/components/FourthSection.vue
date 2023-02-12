@@ -4,7 +4,7 @@ import "../assets/sharedHomePage.css";
 <template>
   <div class="fourth-section">
     <div class="grid-colrow28">
-      <div class="cell-left">
+      <div class="left" id="left1">
         <div>
           <span class="bold-text">
             <span class="large-text zuci-text red-text">Construct</span>
@@ -17,13 +17,13 @@ import "../assets/sharedHomePage.css";
           instruments by gathering and assembling raw materials together.
         </div>
       </div>
-      <div class="cell-right">
+      <div class="cell-image" id="right1">
         <img src="@/images/mixingrm.gif" />
       </div>
-      <div class="cell-left">
+      <div class="cell-image" id="left2">
         <img src="@/images/teams.png" />
       </div>
-      <div class="cell-right">
+      <div class="right" id="right2">
         <div>
           <span class="bold-text">
             A team of
@@ -36,20 +36,20 @@ import "../assets/sharedHomePage.css";
           raw materials for your musical instruments.
         </div>
       </div>
-      <div class="cell-left">
+      <div class="left" id="left3">
         <div>
           <span class="large-text red-text zuci-text">WINNER</span>
           <br />
           The team to construct all the folk musical instruments first, WINS!
         </div>
       </div>
-      <div class="cell-right">
+      <div class="cell-image" id="right3">
         <img src="@/images/4playerswintransparent.png" alt="" />
       </div>
-      <div class="cell-left">
+      <div class="cell-image" id="left4">
         <img src="@/images/cards3.png" alt="" />
       </div>
-      <div class="cell-right">
+      <div class="right" id="right4">
         <div>
           <span class="large-text red-text zuci-text">Powers</span>
           <br />
@@ -70,33 +70,92 @@ import "../assets/sharedHomePage.css";
   padding-right: 15vw;
 }
 
-.fourth-section > .grid-colrow28 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
-  grid-column-gap: 4rem;
-  grid-row-gap: 4rem;
-  margin: 0 auto;
-  padding-top: 10rem;
+@media only screen and (min-width: 551px) {
+  .fourth-section > .grid-colrow28 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "left1 right1"
+      "left2 right2"
+      "left3 right3"
+      "left4 right4";
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+    padding-top: 10rem;
+    margin: 0 auto;
+    padding-left: auto;
+    padding-right: auto;
+  }
 }
 
-.fourth-section > .grid-colrow28 > .cell-left {
-  grid-column: 1 / span 1;
+#left1 {
+  grid-area: left1;
   display: grid;
   place-items: center;
 }
-.fourth-section > .grid-colrow28 > .cell-right {
-  grid-column: 2 / span 1;
+#left2 {
+  grid-area: left2;
+  display: grid;
+  place-items: center;
+}
+#left3 {
+  grid-area: left3;
+  display: grid;
+  place-items: center;
+}
+#left4 {
+  grid-area: left4;
   display: grid;
   place-items: center;
 }
 
-.fourth-section > .grid-colrow28 > .cell-left > img {
+#right1 {
+  grid-area: right1;
+  display: grid;
+  place-items: center;
+}
+#right2 {
+  grid-area: right2;
+  display: grid;
+  place-items: center;
+}
+#right3 {
+  grid-area: right3;
+  display: grid;
+  place-items: center;
+}
+#right4 {
+  grid-area: right4;
+  display: grid;
+  place-items: center;
+}
+
+.cell-image > img {
   max-width: 100%;
   height: auto;
 }
-.fourth-section > .grid-colrow28 > .cell-right > img {
-  max-width: 100%;
-  height: auto;
+
+@media only screen and (max-width: 550px) {
+  .fourth-section > .grid-colrow28 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "left1"
+      "right1"
+      "right2"
+      "left2"
+      "left3"
+      "right3"
+      "right4"
+      "left4"
+    ;
+    grid-row-gap: 4rem;
+    /*margin: 0 auto;*/
+    padding-top: 10rem;
+    padding-left: auto;
+    padding-right: auto;
+  }
 }
 </style>

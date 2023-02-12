@@ -4,7 +4,7 @@ import "../assets/sharedHomePage.css";
 <template>
   <div class="name">
     <div class="name-center">
-      <span class="big-size-text zuci-text red-text">ZUCI</span
+      <span class="big-size-title zuci-text red-text">ZUCI</span
       ><span class="normal-text bold-text">
         a MULTIPLAYER table top PHY-GITAL board game</span
       >

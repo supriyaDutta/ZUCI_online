@@ -4,8 +4,8 @@ import "../assets/sharedHomePage.css";
 <template>
   <div class="six-section">
     <div>
-      <span class="large-text bold-text red-text"
-        >Why <span class="zuci-text"> ZUCI</span> ?</span
+      <span class="bold-text red-text title-text"
+        >Why <span class="title-text zuci-text"> ZUCI</span>?</span
       ><br /><br />
       <p>
         Did you know that many of them are already
@@ -39,5 +39,9 @@ import "../assets/sharedHomePage.css";
 
 .foot-space {
   height: 20vh;
+}
+.title-text {
+  line-height: 1.2;
+  font-size: 3rem;
 }
 </style>
