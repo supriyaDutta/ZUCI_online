@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from "vue-router";
 import "../assets/sharedHomePage.css";
 </script>
 <template>
@@ -21,7 +22,9 @@ import "../assets/sharedHomePage.css";
           <div class="features">RuleBook</div>
           <div>
             Ready to play <span class="bold-text">ZUCI</span> ? <br />
-            <a href="/rulebook">Click here</a> to go through the rules.
+              <RouterLink to="/rulebook" class="green">
+        Click here
+      </RouterLink> to go through the rules.
           </div>
         </div>
       </div>
